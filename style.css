@@ -62,6 +62,7 @@ ul {
 
 img {
     max-width: 100%;
+    height: auto;
     display: block;
     object-fit: cover;
 }
@@ -370,6 +371,21 @@ h2::after {
 }
 
 /* --- Mobile Responsiveness --- */
+/* Fix desktop menu overlap on smaller laptops/tablets/desktop-site-on-phone */
+@media (max-width: 1300px) {
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 992px) {
     .navbar {
         padding: 0 20px;
@@ -415,6 +431,36 @@ h2::after {
     }
 }
 
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    /* Horizontal scroll for some sections if needed */
+    .mobile-scroll {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 20px;
+    }
+
+    .mobile-scroll>* {
+        min-width: 85%;
+        scroll-snap-align: center;
+    }
+}
+
+/* Moved 480px query to end to ensure correct cascading */
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
@@ -453,38 +499,6 @@ h2::after {
     .logo-container span:nth-of-type(2) {
         font-size: 0.65rem !important;
         letter-spacing: 0.5px !important;
-    }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    .grid-2,
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        padding: 1.5rem;
-    }
-
-    /* Horizontal scroll for some sections if needed */
-    .mobile-scroll {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        padding-bottom: 20px;
-    }
-
-    .mobile-scroll>* {
-        min-width: 85%;
-        scroll-snap-align: center;
     }
 }
 
