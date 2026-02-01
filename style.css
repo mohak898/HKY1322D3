@@ -196,6 +196,7 @@ h2::after {
     background: var(--gradient-overlay), url(assets/home\ page1.jpeg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
     align-items: center;
@@ -383,6 +384,18 @@ h2::after {
 
     .nav-links a {
         font-size: 0.8rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+}
+
+/* Disable fixed background on mobile/tablet to prevent glitching */
+@media (max-width: 1024px) {
+    .hero {
+        background-attachment: scroll;
+        background-position: center top;
     }
 }
 
