@@ -42,12 +42,18 @@
     box-sizing: border-box;
 }
 
+html,
 body {
+    width: 100%;
+    max-width: 100%;
     font-family: var(--font-body);
     background-color: var(--bg-cream);
     color: var(--text-dark);
     line-height: 1.7;
     overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 a {
