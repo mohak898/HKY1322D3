@@ -272,14 +272,14 @@ h2::after {
 /* Grid Layouts */
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
 .grid-2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
 }
 
 /* Card Design */
@@ -412,6 +412,47 @@ h2::after {
 
     .hero-content p {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .grid-3,
+    .grid-2 {
+        gap: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Header adjustments for small screens */
+    .logo-container img {
+        height: 40px !important;
+    }
+
+    .logo-container span:nth-of-type(1) {
+        font-size: 1.1rem !important;
+    }
+
+    .logo-container span:nth-of-type(2) {
+        font-size: 0.65rem !important;
+        letter-spacing: 0.5px !important;
     }
 }
 
