@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Greenwood School</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .event-date-tag {
+            background: var(--primary-green);
+            color: white;
+            padding: 8px 15px;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .event-time {
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-grey);
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header injected by script.js -->
+
+    <div class="hero" style="height: 40vh; background: var(--gradient-overlay), url(assets/function2.jpeg);">
+        <div class="hero-content animate-on-scroll">
+            <h1>School Events</h1>
+            <p>Celebrating moments of joy, learning, and community building.</p>
+        </div>
+    </div>
+
+    <section class="section-white">
+        <div class="container">
+            <h2 class="animate-on-scroll">Upcoming Events</h2>
+
+            <div class="grid-3">
+                <div class="card animate-on-scroll">
+                    <div class="event-date-tag">FEB 20</div>
+                    <div
+                        style="height: 200px; background: #eee; border-radius: 8px; margin-bottom: 1.2rem; background: center/cover url(assets/science1.jpeg);">
+                    </div>
+                    <h3>Science Exhibition</h3>
+                    <div class="event-time">⏱ 10:00 AM - 4:00 PM</div>
+                    <p>Students showcase their innovative projects and experiments. Open for paretns and guests.</p>
+                </div>
+
+                <div class="card animate-on-scroll" style="transition-delay: 0.2s">
+                    <div class="event-date-tag">MAR 05</div>
+                    <div
+                        style="height: 200px; background: #eee; border-radius: 8px; margin-bottom: 1.2rem; background: center/cover url(assets/sports2.jpeg);">
+                    </div>
+                    <h3>Sports Meet</h3>
+                    <div class="event-time">⏱ 8:00 AM - 2:00 PM</div>
+                    <p>Annual athletic meet featuring track and field events. Come cheer for your house!</p>
+                </div>
+
+                <div class="card animate-on-scroll" style="transition-delay: 0.4s">
+                    <div class="event-date-tag">APR 14</div>
+                    <div
+                        style="height: 200px; background: #eee; border-radius: 8px; margin-bottom: 1.2rem; background: center/cover url(assets/function2.jpeg);">
+                    </div>
+                    <h3>Cultural Fest</h3>
+                    <div class="event-time">⏱ 5:00 PM - 9:00 PM</div>
+                    <p>An evening of dance, music, and drama performances celebrating our diverse culture.</p>
+                </div>
+            </div>
+
+            <br><br><br>
+            <h2 class="animate-on-scroll">Past Highlights</h2>
+            <div class="grid-3 mobile-scroll">
+                <div class="card animate-on-scroll" style="padding: 0; overflow: hidden; border: none;">
+                    <div
+                        style="height: 250px; background: #ddd; background: center/cover url(assets/halloffame1.jpeg);">
+                    </div>
+                </div>
+                <div class="card animate-on-scroll" style="padding: 0; overflow: hidden; border: none;">
+                    <div style="height: 250px; background: #ddd; background: center/cover url(assets/sports1.jpeg);">
+                    </div>
+                </div>
+                <div class="card animate-on-scroll" style="padding: 0; overflow: hidden; border: none;">
+                    <div style="height: 250px; background: #ddd; background: center/cover url(assets/cultural1.jpeg);">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer injected by script.js -->
+    <script src="script.js"></script>
+</body>
+
+</html>

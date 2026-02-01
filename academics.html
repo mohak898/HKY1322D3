@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics | Greenwood School</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .dept-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .dept-btn {
+            padding: 12px 24px;
+            background: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: var(--text-grey);
+        }
+
+        .dept-btn:hover,
+        .dept-btn.active {
+            background: var(--primary-green);
+            color: var(--white);
+            border-color: var(--primary-green);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 125, 50, 0.2);
+        }
+
+        .dept-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .dept-content.active {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Faculty Card Refinement (Global) */
+        .faculty-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-yellow);
+            transition: transform 0.2s;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .faculty-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #eee;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header injected by script.js -->
+
+    <div class="hero" style="height: 50vh; background: var(--gradient-overlay), url(assets/classroom1.jpeg);">
+        <div class="hero-content animate-on-scroll">
+            <h1>Academics</h1>
+            <p>Exploring the frontiers of knowledge through our specialized departments.</p>
+        </div>
+    </div>
+
+    <section class="section-white">
+        <div class="container">
+            <!-- Department Navigation -->
+            <div class="dept-nav animate-on-scroll">
+                <button class="dept-btn active" onclick="showDept('basic-sciences')">Science</button>
+                <button class="dept-btn" onclick="showDept('mathematics')">Mathematics</button>
+                <button class="dept-btn" onclick="showDept('computer-science')">Computer Science</button>
+                <button class="dept-btn" onclick="showDept('humanities')">Humanities</button>
+            </div>
+
+            <!-- Content Container -->
+            <div id="dept-container">
+
+                <!-- Basic Sciences -->
+                <div id="basic-sciences" class="dept-content active">
+                    <div class="card" style="border-top-color: var(--secondary-green);">
+                        <h2>Science Department</h2>
+                        <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+                            The foundation of all scientific inquiry. Our Basic Sciences department introduces students
+                            to the wonders of the natural world through biology, physics, and chemistry.
+                        </p>
+
+                        <!-- Teaching Faculty Grid (Moved to Top) -->
+                        <h3 style="margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 10px;">Teaching
+                            Faculty</h3>
+                        <div class="grid-2">
+                            <div class="faculty-card">
+                                <div class="faculty-img" style="background: center/cover url(assets/woman1.jpeg);">
+                                </div>
+                                <div>
+                                    <h4>Dr. Sarah O'Neil</h4>
+                                    <p><strong>Teaching Interests:</strong> Biology, Genetics, Environmental Science</p>
+                                    <p><strong>Qualifications:</strong> Ph.D. in Biology, M.Sc. Botany</p>
+                                </div>
+                            </div>
+                            <div class="faculty-card">
+                                <div class="faculty-img" style="background: center/cover url(assets/man1.jpeg);">
+                                </div>
+                                <div>
+                                    <h4>Mr. Albert K.</h4>
+                                    <p><strong>Interests:</strong> Physics, Mechanics</p>
+                                    <p><strong>Quals:</strong> M.Sc Physics</p>
+                                </div>
+                            </div>
+                            <div class="faculty-card">
+                                <div class="faculty-img" style="background: center/cover url(assets/woman1.jpeg);">
+                                </div>
+                                <div>
+                                    <h4>Dr. Marie C.</h4>
+                                    <p><strong>Interests:</strong> Chemistry, Organic</p>
+                                    <p><strong>Quals:</strong> Ph.D. Chemistry</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Facilities -->
+                        <h3 style="margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 10px;">Facilities &
+                            Labs</h3>
+                        <div class="grid-2">
+                            <div>
+                                <div
+                                    style="height: 200px; background: #eee; border-radius: 8px; margin-bottom: 15px; background: center/cover url(assets/chem\ lab1.jpeg);">
+                                </div>
+                                <h4>Chemistry Lab</h4>
+                                <p>A safe, ventilated environment where students conduct advanced experiments and master
+                                    the principles of molecular science.</p>
+                            </div>
+                            <div>
+                                <div
+                                    style="height: 200px; background: #eee; border-radius: 8px; margin-bottom: 15px; background: center/cover url(assets/phy\ lab1.jpeg);">
+                                </div>
+                                <h4>Physics Lab</h4>
+                                <p>An interactive space featuring precision instruments for the practical study of
+                                    mechanics, optics, and electromagnetism.</p>
+                            </div>
+                            <div>
+                                <div
+                                    style="height: 200px; background: #eee; border-radius: 8px; margin-bottom: 15px; background: center/cover url(assets/bio\ lab1.jpeg);">
+                                </div>
+                                <h4>Biology Lab</h4>
+                                <p>A state-of-the-art facility equipped with high-resolution microscopes and anatomical
+                                    models for deep biological exploration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mathematics -->
+                <div id="mathematics" class="dept-content">
+                    <div class="card">
+                        <h2>Mathematics Department</h2>
+                        <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+                            The language of the universe. We focus on logical reasoning and problem solving through
+                            arithmetic, algebra, and geometry.
+                        </p>
+
+                        <!-- Teaching Faculty Grid (Moved to Top) -->
+                        <h3 style="margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 10px;">Teaching
+                            Faculty</h3>
+                        <div class="grid-2">
+                            <div class="faculty-card">
+                                <div class="faculty-img" style="background: center/cover url(assets/man1.jpeg);">
+                                </div>
+                                <div>
+                                    <h4>Mrs. Ramanujan</h4>
+                                    <p><strong>Teaching Interests:</strong> Calculus, Algebra</p>
+                                    <p><strong>Qualifications:</strong> M.Sc. Mathematics, B.Ed</p>
+                                </div>
+                            </div>
+                            <div class="faculty-card">
+                                <div class="faculty-img" style="background: center/cover url(assets/man1.jpeg);">
+                                </div>
+                                <div>
+                                    <h4>Mr. John D.</h4>
+                                    <p><strong>Interests:</strong> Geometry, Trig</p>
+                                    <p><strong>Quals:</strong> B.Sc Math</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Facilities -->
+                        <!-- <h3 style="margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 10px;">Facilities &
+                            Labs</h3>
+                        <div class="grid-2">
+                            <div>
+                                <div
+                                    style="height: 200px; background: #eee; border-radius: 8px; margin-bottom: 15px; background: center/cover url('assets/math-lab.jpg');">
+                                </div>
+                                <h4>Math Laboratory</h4>
+                                <p>Interactive tools for geometric visualization.</p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Computer Science -->
+                <div id="computer-science" class="dept-content">
+                    <div class="card">
+                        <h2>Computer Science Department</h2>
+                        <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+                            Empowering students with digital literacy, coding skills, and computational thinking for the
+                            future.
+                        </p>
+
+                        <!-- Teaching Faculty Grid (Moved to Top) -->
+                        <h3 style="margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 10px;">Teaching
+                            Faculty</h3>
+                        <div class="grid-2">
+                            <div class="faculty-card">
+                                <div class="faculty-img" style="background: center/cover url(assets/man1.jpeg);">
+                                </div>
+                                <div>
+                                    <h4>Mr. Alan Turing</h4>
+                                    <p><strong>Teaching Interests:</strong> Algorithms, AI, Data Structures</p>
+                                    <p><strong>Qualifications:</strong> M.Tech Computer Science</p>
+                                </div>
+                            </div>
+                            <div class="faculty-card">
+                                <div class="faculty-img" style="background: center/cover url(assets/woman1.jpeg);">
+                                </div>
+                                <div>
+                                    <h4>Ms. Ada Lovelace</h4>
+                                    <p><strong>Interests:</strong> Python, Web Dev</p>
+                                    <p><strong>Quals:</strong> MCA</p>
+                                </div>
+                            </div>
+                            <div class="faculty-card">
+                                <div class="faculty-img" style="background: center/cover url(assets/woman1.jpeg);">
+                                </div>
+                                <div>
+                                    <h4>Mr. Charles B.</h4>
+                                    <p><strong>Interests:</strong> Hardware, Networking</p>
+                                    <p><strong>Quals:</strong> B.Tech IT</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Facilities -->
+                        <h3 style="margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 10px;">Facilities &
+                            Labs</h3>
+                        <div class="grid-2">
+                            <div>
+                                <div
+                                    style="height: 200px; background: #eee; border-radius: 8px; margin-bottom: 15px; background: center/cover url(assets/computer\ lab1.jpeg);">
+                                </div>
+                                <h4>Computer Lab</h4>
+                                <p>A high-speed computing hub dedicated to software development, AI research, and
+                                    mastering modern programming languages.</p>
+                            </div>
+                            <!-- <div>
+                                <div
+                                    style="height: 200px; background: #eee; border-radius: 8px; margin-bottom: 15px; background: center/cover url('assets/robotics-studio.jpg');">
+                                </div>
+                                <h4>Robotics Studio</h4>
+                                <p>Dedicated space for IoT and Robotics projects.</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Humanities -->
+                <div id="humanities" class="dept-content">
+                    <div class="card">
+                        <h2>Humanities Department</h2>
+                        <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+                            Understanding society, history, language and literature. Fostering critical thinking and
+                            cultural appreciation.
+                        </p>
+
+                        <!-- Teaching Faculty Grid (Moved to Top) -->
+                        <h3 style="margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 10px;">Teaching
+                            Faculty</h3>
+                        <div class="grid-2">
+                            <div class="faculty-card">
+                                <div class="faculty-img" style="background: center/cover url(assets/woman1.jpeg);">
+                                </div>
+                                <div>
+                                    <h4>Dr. Elizabeth B.</h4>
+                                    <p><strong>Teaching Interests:</strong> English Literature, History</p>
+                                    <p><strong>Qualifications:</strong> Ph.D. English</p>
+                                </div>
+                            </div>
+                            <div class="faculty-card">
+                                <div class="faculty-img" style="background: center/cover url(assets/woman1.jpeg);">
+                                </div>
+                                <div>
+                                    <h4>Ms. Virginia W.</h4>
+                                    <p><strong>Interests:</strong> Psychology, Sociology</p>
+                                    <p><strong>Quals:</strong> M.A. Psychology</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Facilities -->
+                        <h3 style="margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 10px;">Facilities
+                        </h3>
+                        <div class="grid-2">
+                            <div>
+                                <div
+                                    style="height: 200px; background: #eee; border-radius: 8px; margin-bottom: 15px; background: center/cover url(assets/library1.jpeg);">
+                                </div>
+                                <h4>Library</h4>
+                                <p>A vast, quiet sanctuary housing thousands of physical and digital resources to foster
+                                    a culture of research and lifelong reading.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer injected by script.js -->
+    <script src="script.js"></script>
+    <script>
+        function showDept(deptId) {
+            // Hide all
+            document.querySelectorAll('.dept-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.dept-btn').forEach(el => el.classList.remove('active'));
+
+            // Show target
+            document.getElementById(deptId).classList.add('active');
+
+            // Highlight button
+            const buttons = document.querySelectorAll('.dept-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('onclick').includes(deptId)) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

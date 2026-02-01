@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpdesk | Greenwood School</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Specific Styles for Helpdesk Redesign */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-top: 5px solid var(--primary-green);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--primary-green);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-card p {
+            color: var(--text-grey);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .contact-card strong {
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header injected by script.js -->
+
+    <div class="hero" style="height: 45vh; background: var(--gradient-overlay), url(assets/reception1.jpeg);">
+        <div class="hero-content animate-on-scroll">
+            <h1>Helpdesk & Support</h1>
+            <p>We are here to answer your questions and provide support.</p>
+        </div>
+    </div>
+
+    <section class="section-white">
+        <div class="container animate-on-scroll">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2>Reach Out To Us</h2>
+                <p style="font-size: 1.1rem; color: var(--text-grey); margin-bottom: 2rem;">Whether you are a
+                    prospective parent, a current student, or an alumni, we'd love to hear from you. Visit us, call us,
+                    or drop an email.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Address Card -->
+                <div class="contact-card">
+                    <div class="icon-circle">📍</div>
+                    <h3>Visit Us</h3>
+                    <p>
+                        <strong>Campus Location</strong>
+                        123 School Lane, Knowledge City<br>
+                        Bangalore - 560001
+                    </p>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="contact-card">
+                    <div class="icon-circle">📞</div>
+                    <h3>Call Us</h3>
+                    <p>
+                        <strong>Main Office</strong>
+                        +91 98765 43210
+                    </p>
+                    <br>
+                    <p>
+                        <strong>Admissions</strong>
+                        +91 98765 43211
+                    </p>
+                </div>
+
+                <!-- Email Card -->
+                <div class="contact-card">
+                    <div class="icon-circle">✉️</div>
+                    <h3>Email Us</h3>
+                    <p>
+                        <strong>General Inquiries</strong>
+                        info@greenwood.edu
+                    </p>
+                    <br>
+                    <p>
+                        <strong>Helpdesk Support</strong>
+                        helpdesk@greenwood.edu
+                    </p>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div style="margin-top: 5rem; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+                <!-- Placeholder for Google Map -->
+                <div
+                    style="width: 100%; height: 450px; background: #e0e0e0; display: flex; align-items: center; justify-content: center; color: #666; background: center/cover url(assets/maps1.jpeg); position: relative;">
+                    <div
+                        style="background: rgba(255,255,255,0.9); padding: 2rem; border-radius: 8px; text-align: center;">
+                        <span style="font-size: 3rem;">🗺️</span><br>
+                        <h3>Find us on Google Maps</h3>
+                        <a href="https://maps.google.com" target="_blank" class="btn" style="margin-top: 1rem;">View on
+                            Maps</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer injected by script.js -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Structure | Greenwood School</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .fee-table-container {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 2rem;
+            background: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            min-width: 600px;
+            /* Ensure table doesn't squash too much */
+        }
+
+        th,
+        td {
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        th {
+            background: var(--primary-green);
+            color: white;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #f9fbf9;
+        }
+
+        .note {
+            font-size: 0.95rem;
+            color: var(--text-grey);
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #fff8e1;
+            border-left: 4px solid var(--accent-yellow);
+            border-radius: 4px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header injected by script.js -->
+
+    <div class="hero" style="height: 40vh; background: var(--gradient-overlay), url(assets/fee1.jpeg);">
+        <div class="hero-content animate-on-scroll">
+            <h1>Fee Structure</h1>
+            <p>Transparency in education. Academic Year 2026-27</p>
+        </div>
+    </div>
+
+    <section class="section-white">
+        <div class="container animate-on-scroll">
+
+            <h2 style="margin-bottom: 2rem;">Tuition Fee (Per Annum)</h2>
+            <div class="fee-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Grade</th>
+                            <th>Admission Fee (One Time)</th>
+                            <th>Annual Fee (Yearly)</th>
+                            <th>Tuition Fee (Quarterly)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pre-Nursery / KG</td>
+                            <td>₹ 25,000</td>
+                            <td>₹ 15,000</td>
+                            <td>₹ 12,000</td>
+                        </tr>
+                        <tr>
+                            <td>Grade 1 - 5</td>
+                            <td>₹ 30,000</td>
+                            <td>₹ 18,000</td>
+                            <td>₹ 14,000</td>
+                        </tr>
+                        <tr>
+                            <td>Grade 6 - 8</td>
+                            <td>₹ 35,000</td>
+                            <td>₹ 20,000</td>
+                            <td>₹ 16,000</td>
+                        </tr>
+                        <tr>
+                            <td>Grade 9 - 10</td>
+                            <td>₹ 40,000</td>
+                            <td>₹ 22,000</td>
+                            <td>₹ 18,000</td>
+                        </tr>
+                        <tr>
+                            <td>Grade 11 - 12 (Science)</td>
+                            <td>₹ 45,000</td>
+                            <td>₹ 25,000</td>
+                            <td>₹ 22,000</td>
+                        </tr>
+                        <tr>
+                            <td>Grade 11 - 12 (Commerce/Arts)</td>
+                            <td>₹ 45,000</td>
+                            <td>₹ 25,000</td>
+                            <td>₹ 20,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note">
+                <strong style="color: #333;">Important Notes:</strong><br>
+                * Transport Fee is charged separately based on the distance slab.<br>
+                * Books, Uniforms, and Stationery are not included in the above fee structure.<br>
+                * Fees once paid are non-refundable.
+            </div>
+
+            <div style="margin-top: 5rem;">
+                <h2 style="margin-bottom: 2rem;">Payment Methods</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Bank Transfer / NEFT</h3>
+                        <p style="margin-top: 1rem; line-height: 1.8;">
+                            <strong>Bank Name:</strong> HDFC Bank<br>
+                            <strong>Account Name:</strong> Greenwood School Trust<br>
+                            <strong>Account No:</strong> 00012345678900<br>
+                            <strong>IFSC Code:</strong> HDFC0001234
+                        </p>
+                    </div>
+                    <!-- <div class="card">
+                        <h3>Online Payment</h3>
+                        <p style="margin-top: 1rem; margin-bottom: 2rem;">You can pay fees conveniently online through
+                            our secured Parent Portal using Credit Card, Debit Card, or UPI.</p>
+                        <a href="#" class="btn">Pay Fees Online</a>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer injected by script.js -->
+    <script src="script.js"></script>
+</body>
+
+</html>

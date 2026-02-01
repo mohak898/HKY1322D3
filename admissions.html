@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions | Greenwood School</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Page-Specific Styles for Admissions */
+        .admissions-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        /* Timeline Styles */
+        .process-step {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: -2.5rem;
+            width: 2px;
+            background: #e0e0e0;
+        }
+
+        .process-step:last-child::before {
+            display: none;
+        }
+
+        .step-number {
+            position: absolute;
+            left: -0.9rem;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--primary-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+            border: 4px solid white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .step-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .step-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Sidebar Styles */
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--accent-yellow);
+            position: sticky;
+            top: 100px;
+        }
+
+        .date-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .date-icon {
+            background: #f0f7f0;
+            color: var(--primary-green);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .admissions-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .info-card {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header injected by script.js -->
+
+    <div class="hero" style="height: 50vh; background: var(--gradient-overlay), url(assets/reception1.jpeg);">
+        <div class="hero-content animate-on-scroll">
+            <h1>Join Our Community</h1>
+            <p>Admissions Open for Academic Year 2026-27</p>
+        </div>
+    </div>
+
+    <section class="section-white">
+        <div class="container">
+            <div class="admissions-grid">
+
+                <div class="animate-on-scroll">
+                    <h2>The Admission Process</h2>
+                    <p style="margin-bottom: 2.5rem; color: var(--text-grey); font-size: 1.1rem;">We have designed a
+                        simple, transparent, and hassle-free admission process for parents.</p>
+
+                    <div class="process-timeline">
+                        <!-- Step 1 -->
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Registration</h3>
+                                <p>Fill out the online registration form via our portal or visit the school office to
+                                    collect the physical form. A nominal registration fee applies.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Interaction & Assessment</h3>
+                                <p>For Pre-Primary, we invite parents and the child for a casual interaction. For Grade
+                                    1 onwards, a basic written aptitude test in English and Mathematics is conducted.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Documentation</h3>
+                                <p>Upon selection, submit the required documents: Birth Certificate, Transfer
+                                    Certificate (if applicable), Passport size photos, and Address Proof.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Fee Payment & Enrollment</h3>
+                                <p>Complete the admission formalities by paying the admission fee. You will receive the
+                                    welcome kit and schedule for the new session.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div style="margin-top: 3rem; text-align: center;">
+                        <a href="#" class="btn">Download Admission Form &darr;</a>
+                        <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-grey);">Or <a
+                                href="helpdesk.html"
+                                style="text-decoration: underline; color: var(--primary-green); font-weight: 600;">contact
+                                us</a> for assistance.</p>
+                    </div> -->
+                </div>
+
+                <div class="animate-on-scroll" style="transition-delay: 0.2s">
+                    <div class="info-card">
+                        <h3>Important Dates</h3>
+
+                        <div class="date-item">
+                            <div class="date-icon">📝</div>
+                            <div>
+                                <strong>Feb 10, 2026</strong>
+                                <div style="font-size: 0.9rem; color: var(--text-grey);">Forms Available Online &
+                                    Offline</div>
+                            </div>
+                        </div>
+
+                        <div class="date-item">
+                            <div class="date-icon">⏳</div>
+                            <div>
+                                <strong>Mar 15, 2026</strong>
+                                <div style="font-size: 0.9rem; color: var(--text-grey);">Submission Deadline</div>
+                            </div>
+                        </div>
+
+                        <div class="date-item">
+                            <div class="date-icon">🎒</div>
+                            <div>
+                                <strong>April 1, 2026</strong>
+                                <div style="font-size: 0.9rem; color: var(--text-grey);">New Academic Session Begins
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr style="border: 0; border-top: 1px solid #eee; margin: 1.5rem 0;">
+
+                        <h4>Age Criteria</h4>
+                        <p
+                            style="font-size: 0.95rem; margin-bottom: 0.5rem; display: flex; justify-content: space-between;">
+                            <span>Pre-Nursery:</span> <strong>3+ Years</strong>
+                        </p>
+                        <p style="font-size: 0.95rem; display: flex; justify-content: space-between;"><span>Grade
+                                1:</span> <strong>6+ Years</strong></p>
+                        <p style="font-size: 0.8rem; color: var(--text-grey); margin-top: 5px;">* As of March 31st</p>
+
+                        <div
+                            style="margin-top: 1.5rem; background: #e3f2fd; padding: 15px; border-radius: 8px; font-size: 0.9rem; color: #0d47a1; border: 1px solid #bbdefb;">
+                            ℹ️ <strong>Note:</strong> Seats are limited for Grade 9 and 11.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer injected by script.js -->
+    <script src="script.js"></script>
+</body>
+
+</html>
