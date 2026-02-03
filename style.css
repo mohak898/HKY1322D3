@@ -339,6 +339,31 @@ h2::after {
     color: rgba(255, 255, 255, 0.8);
     padding: 5rem 5% 1rem;
     margin-top: auto;
+    position: relative;
+    /* Structural setup for watermark */
+    overflow: hidden;
+    /* Prevent watermark from expanding page height */
+}
+
+.footer-watermark {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 30%);
+    /* Submerged 30% below horizon */
+    font-size: 15vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.5rem;
+    color: rgba(255, 255, 255, 0.132);
+    /* Subtle opacity */
+    z-index: 1;
+    pointer-events: none;
+    line-height: 1;
+    /* Ensure tight bounding box */
+    margin-bottom: 0;
+    /* Override default H1 margin */
 }
 
 .footer-content {
@@ -347,6 +372,9 @@ h2::after {
     gap: 4rem;
     max-width: var(--container-width);
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    /* Layer above watermark */
 }
 
 .footer-section h3 {
@@ -373,6 +401,9 @@ h2::after {
     margin-top: 4rem;
     padding-top: 2rem;
     font-size: 0.9rem;
+    position: relative;
+    z-index: 2;
+    /* Layer above watermark */
 }
 
 .hikat-credit strong {
@@ -523,6 +554,19 @@ h2::after {
     .logo-container span:nth-of-type(2) {
         font-size: 0.65rem !important;
         letter-spacing: 0.5px !important;
+    }
+}
+
+/* Watermark Responsive Fix */
+@media (max-width: 768px) {
+    .main-footer {
+        padding-bottom: 8rem;
+        /* Ensure space for content above watermark on small screens if needed */
+    }
+
+    .footer-watermark {
+        font-size: 18vw;
+        /* Larger visual size on mobile */
     }
 }
 

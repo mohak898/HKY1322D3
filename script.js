@@ -158,6 +158,9 @@ function loadFooter() {
                     <a href="https://hikat.xyz" target="_blank" style="color: var(--accent-yellow); text-decoration: none; font-weight: 700; border-bottom: 2px solid transparent; transition: all 0.3s;">HIKAT</a>
                 </p>
             </div>
+            
+            <!-- Watermark -->
+            <h1 class="footer-watermark">GREENWOOD</h1>
         </footer>
     `;
 
