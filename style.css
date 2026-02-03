@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 /* 
  * Greenwood School - Professional Theme 
  * Designed by HIKAT AI Agent
@@ -26,7 +28,7 @@
     --container-width: 1200px;
     --header-height: 80px;
     --font-heading: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-body: 'Roboto', sans-serif;
 
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -136,8 +138,8 @@ h2::after {
 
 .nav-links a {
     font-weight: 500;
-    font-size: 0.9rem;
-    color: var(--text-dark);
+    font-size: 13px;
+    color: #33373D;
     position: relative;
     padding: 5px 0;
     text-transform: uppercase;
@@ -430,7 +432,7 @@ h2::after {
         visibility: hidden;
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-        gap: 2rem;
+        gap: 15px;
     }
 
     .nav-links.active {
@@ -440,8 +442,8 @@ h2::after {
     }
 
     .nav-links a {
-        font-size: 1.2rem;
-        font-weight: 600;
+        font-size: 13px;
+        font-weight: 500;
     }
 
     h1 {
